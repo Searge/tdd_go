@@ -4,6 +4,14 @@
 
 This is a collection of [Go](https://golang.org) code examples that show how to write [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests.
 
+## Links from the book
+
+- [New module changes in Go 1.16](https://go.dev/blog/go116-module-changes)
+- [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+- [fmt package](https://pkg.go.dev/fmt#hdr-Printing)
+- [Five suggestions for setting up a Go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
+- [Testable Examples in Go](https://go.dev/blog/examples)
+
 ## Progress
 
 1. **Helloworld**: Completed implementation of the [Hello](helloworld/hello.go#L15-L21) function with tests for different languages (English, Spanish, French) and default behavior for empty input.
