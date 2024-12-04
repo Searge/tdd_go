@@ -45,7 +45,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${go-version}
+          go-version: ${{ env.go-version }}
       - name: Test
         run: go test -v ${{ matrix.dir }}
 
@@ -60,7 +60,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${go-version}
+          go-version: ${{ env.go-version }}
       - name: Go Coverage Report
         id: coverage
         uses: gwatts/go-coverage-action@v2
@@ -75,6 +75,6 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${go-version}
+          go-version: ${{ env.go-version }}
       - name: Build
         run: go build -v ./...
