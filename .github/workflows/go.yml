@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   find-test-dirs:
-    runs-on: ${{ env.os-version }}
+    runs-on: ${os-version}
     steps:
       - uses: actions/checkout@v4
       - name: Find Test Dirs
@@ -36,7 +36,7 @@ jobs:
         dirs: ${{ steps.set-dirs.outputs.dirs }}
 
   test:
-    runs-on: ${{ env.os-version }}
+    runs-on: ${os-version}
     needs: find-test-dirs
     strategy:
       matrix:
@@ -46,12 +46,12 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ env.go-version }}
+          go-version: ${go-version}
       - name: Test
         run: go test -v ${{ matrix.dir }}
 
   coverage:
-    runs-on: ${{ env.os-version }}
+    runs-on: ${os-version}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,7 +60,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ env.go-version }}
+          go-version: ${go-version}
       - name: Go Coverage Report
         id: coverage
         uses: gwatts/go-coverage-action@v2
@@ -75,6 +75,6 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ env.go-version }}
+          go-version: ${go-version}
       - name: Build
         run: go build -v ./...
