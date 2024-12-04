@@ -43,9 +43,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version: ${{ env.go-version }}
+          cache-dependency-path: "./go.mod"
       - name: Test
         run: go test -v ${{ matrix.dir }}
 
@@ -58,9 +59,10 @@ jobs:
           # default fetch-depth is insufficent to find previous coverage notes
           fetch-depth: 10
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version: ${{ env.go-version }}
+          cache-dependency-path: "./go.mod"
       - name: Go Coverage Report
         id: coverage
         uses: gwatts/go-coverage-action@v2
@@ -73,8 +75,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
-          go-version: ${{ env.go-version }}
+          go-version-file: "./go.mod"
+          cache-dependency-path: "./go.mod"
       - name: Build
         run: go build -v ./...
