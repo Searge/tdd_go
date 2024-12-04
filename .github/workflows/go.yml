@@ -10,7 +10,6 @@ on:
     branches: ["main"]
 
 env:
-  os-version: ubuntu-24.04
   go-version: 1.23
 
 permissions:
@@ -21,7 +20,7 @@ permissions:
 
 jobs:
   find-test-dirs:
-    runs-on: ${os-version}
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Find Test Dirs
@@ -36,7 +35,7 @@ jobs:
         dirs: ${{ steps.set-dirs.outputs.dirs }}
 
   test:
-    runs-on: ${os-version}
+    runs-on: ubuntu-24.04
     needs: find-test-dirs
     strategy:
       matrix:
@@ -51,7 +50,8 @@ jobs:
         run: go test -v ${{ matrix.dir }}
 
   coverage:
-    runs-on: ${os-version}
+    runs-on: ubuntu-24.04
+    needs: find-test-dirs
     steps:
       - uses: actions/checkout@v4
         with:
