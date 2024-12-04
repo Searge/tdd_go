@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  os-version: ubuntu-24.04
+  go-version: 1.23
+
 permissions:
   actions: write
   contents: write
@@ -16,11 +20,38 @@ permissions:
   statuses: write
 
 jobs:
-  test-and-build:
-    runs-on: ubuntu-24.04
+  find-test-dirs:
+    runs-on: ${{ env.os-version }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find Test Dirs
+        id: set-dirs
+        run: |
+          dirs=$(find . -type d -not -path '.' \
+            -exec sh -c 'ls "{}"/*.go 2>/dev/null \
+            | grep -q "_test.go$"' \; -print \
+            | jq --raw-input --slurp 'split("\n")[:-1]')
+          echo "dirs=$(echo $dirs)" >> $GITHUB_OUTPUT
+    outputs:
+        dirs: ${{ steps.set-dirs.outputs.dirs }}
+
+  test:
+    runs-on: ${{ env.os-version }}
+    needs: find-test-dirs
     strategy:
       matrix:
-        go-version: ["1.23"]
+        dir: ${{fromJson(needs.find-test-dirs.outputs.dirs)}}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ env.go-version }}
+      - name: Test
+        run: go test -v ${{ matrix.dir }}
+
+  coverage:
+    runs-on: ${{ env.os-version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,15 +60,21 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ matrix.go-version }}
-      - name: Test
-        run: go test -v ./...
+          go-version: ${{ env.go-version }}
       - name: Go Coverage Report
         id: coverage
         uses: gwatts/go-coverage-action@v2
         with:
           coverage-threshold: 80
           cover-pkg: ./...
+  build:
+    runs-on: ubuntu-24.04
+    needs: [test, coverage]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ env.go-version }}
       - name: Build
-        if: success()
         run: go build -v ./...
