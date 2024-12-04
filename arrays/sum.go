@@ -20,6 +20,9 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
+// SumAllTails takes a starting index and a variadic number of slices of
+// integers, and returns a slice of the sums of each slice, starting from the
+// given index. If any of the slices are empty, the sum is 0.
 func SumAllTails(head int, numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {
