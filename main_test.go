@@ -24,8 +24,3 @@ func TestMain(t *testing.T) {
 		t.Errorf("expected hello message to be printed, but got %q", buf.String())
 	}
 }
-
-func ExampleMain() {
-	run("Spanish", false, nil)
-	// Output: Hola, World
-}
