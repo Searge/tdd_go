@@ -2,6 +2,11 @@
 
 [![Learn Go with Tests](assets/tdd_go.webp)](https://quii.gitbook.io/learn-go-with-tests)
 
+![Created](https://img.shields.io/date/1732961863.svg?style=flat-square&logo=github)
+![Repo size](https://img.shields.io/github/repo-size/Searge/tdd_go?style=flat-square)
+![Top language](https://img.shields.io/github/languages/top/Searge/tdd_go?style=flat-square)
+![Deploy](https://github.com/Searge/tdd_go/workflows/test-and-build/badge.svg?branch=main&style=flat-square)
+
 This is a collection of [Go](https://golang.org) code examples that show how to write [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests.
 
 ## Links from the book
