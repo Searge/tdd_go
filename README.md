@@ -18,6 +18,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Five suggestions for setting up a Go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - [Testable Examples in Go](https://go.dev/blog/examples)
 - [Testing | Benchmarking](https://pkg.go.dev/testing#hdr-Benchmarks)
+- [The cover story](https://go.dev/blog/cover)
 
 ## Progress
 
