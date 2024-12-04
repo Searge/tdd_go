@@ -17,12 +17,15 @@ permissions:
 
 jobs:
   test-and-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         go-version: ["1.23"]
     steps:
       - uses: actions/checkout@v4
+        with:
+          # default fetch-depth is insufficent to find previous coverage notes
+          fetch-depth: 10
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
