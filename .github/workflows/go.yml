@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  test-and-build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,14 +22,7 @@ jobs:
       with:
         go-version: ${{ matrix.go-version }}
     - name: Test
-      run: |
-        go test -v ./... > test-output.txt
-      continue-on-error: true
-    - name: Upload test output
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-output
-        path: test-output.txt
+      run: go test -v ./...
     - name: Build
       if: success()
       run: go build -v ./...
