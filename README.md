@@ -11,6 +11,14 @@
 
 This is a collection of [Go](https://golang.org) code examples that show how to write [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests.
 
+## Progress
+
+1. **Helloworld**: Completed implementation of the [Hello](helloworld/hello.go#L15-L21) function with tests for different languages (English, Spanish, French) and default behavior for empty input.
+2. **Integers**: Implemented the [Add](integers/adder.go#L6-L13) function with tests for basic arithmetic operations and logging of results.
+   1. **Examples**: Completed implementation of the `ByAge` struct and its methods for sorting a slice of [Person](examples/sort_test.go#L8-L15) structs by age.
+3. **Iteration**: Implemented the [Repeat](iteration/repeat.go#L3-L9) function with tests for repeating a character a specified number of times.
+4. **Arrays**: Implemented the [Sum](arrays/sum.go#L4-L10) function with tests for basic arithmetic operations and logging of results. And [SumAllTrails](arrays/sum.go#L23-L35) function with tests for basic arithmetic operations and logging of results.
+
 ## Links from the book
 
 - [New module changes in Go 1.16](https://go.dev/blog/go116-module-changes)
@@ -22,15 +30,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Testing | Benchmarking](https://pkg.go.dev/testing#hdr-Benchmarks)
 - [The cover story](https://go.dev/blog/cover)
 - [Go Slices: usage and internals](https://go.dev/blog/slices-intro)
-  - Slices examples:
+  - **Slices examples:**
     - [sample 01](https://go.dev/play/p/ICCWcRGIO68)
     - [sample 02](https://go.dev/play/p/bTrRmYfNYCp)
     - [sample 03](https://go.dev/play/p/Poth8JS28sc)
-
-## Progress
-
-1. **Helloworld**: Completed implementation of the [Hello](helloworld/hello.go#L15-L21) function with tests for different languages (English, Spanish, French) and default behavior for empty input.
-2. **Integers**: Implemented the [Add](integers/adder.go#L6-L13) function with tests for basic arithmetic operations and logging of results.
-   1. **Examples**: Completed implementation of the `ByAge` struct and its methods for sorting a slice of [Person](examples/sort_test.go#L8-L15) structs by age.
-3. **Iteration**: Implemented the [Repeat](iteration/repeat.go#L3-L9) function with tests for repeating a character a specified number of times.
-4. **Arrays**: Implemented the [Sum](arrays/sum.go#L4-L10) function with tests for basic arithmetic operations and logging of results. And [SumAllTrails](arrays/sum.go#L23-L35) function with tests for basic arithmetic operations and logging of results.
