@@ -20,10 +20,14 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
-func SumAllTails(numbersToSum ...[]int) []int {
+func SumAllTails(head int, numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {
-		tail := numbers[1:]
+		if len(numbers) == 0 {
+			sums = append(sums, 0)
+			continue
+		}
+		tail := numbers[head:]
 		sums = append(sums, Sum(tail))
 	}
 
