@@ -5,7 +5,7 @@
 ![Created](https://img.shields.io/date/1732961863.svg?style=flat-square&logo=github)
 ![Repo size](https://img.shields.io/github/repo-size/Searge/tdd_go?style=flat-square)
 ![Top language](https://img.shields.io/github/languages/top/Searge/tdd_go?style=flat-square)
-[![Go](https://github.com/Searge/tdd_go/actions/workflows/go.yml/badge.svg?branch=main&style=flat-square)](https://github.com/Searge/tdd_go/actions/workflows/go.yml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Searge/tdd_go/go.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white&label=Go&link=https%3A%2F%2Fgithub.com%2FSearge%2Ftdd_go%2Factions%2Fworkflows%2Fgo.yml)
 
 This is a collection of [Go](https://golang.org) code examples that show how to write [TDD](https://en.wikipedia.org/wiki/Test-driven_development) tests.
 
