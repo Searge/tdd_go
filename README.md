@@ -2,7 +2,7 @@
 
 [![Learn Go with Tests](assets/tdd_go.webp)](https://quii.gitbook.io/learn-go-with-tests)
 
-[![Visits Badge](https://badges.pufler.dev/visits/Searge/tdd_go?style=flat-square&logo=refinedgithub&logoColor=white)](https://badges.pufler.dev)
+![Visitor](https://visitor-badge.laobi.icu/badge?page_id=Searge.tdd_go)
 ![Top language](https://img.shields.io/github/languages/top/Searge/tdd_go?style=flat-square)
 ![Repo size](https://img.shields.io/github/repo-size/Searge/tdd_go?style=flat-square)
 ![Created](https://img.shields.io/date/1732961863.svg?style=flat-square&logo=github&label=created)
