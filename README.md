@@ -34,3 +34,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
     - [sample 01](https://go.dev/play/p/ICCWcRGIO68)
     - [sample 02](https://go.dev/play/p/bTrRmYfNYCp)
     - [sample 03](https://go.dev/play/p/Poth8JS28sc)
+- [Method declarations](https://go.dev/ref/spec#Method_declarations)
