@@ -19,6 +19,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 3. **Iteration**: Implemented the [Repeat](iteration/repeat.go#L3-L9) function with tests for repeating a character a specified number of times.
 4. **Arrays**: Implemented the [Sum](arrays/sum.go#L4-L10) function with tests for basic arithmetic operations and logging of results. And [SumAllTrails](arrays/sum.go#L23-L35) function with tests for basic arithmetic operations and logging of results.
 5. **Structs:** Implemented the [Shape interface](structs/shapes.go#L5-L7) and its methods for calculating area and perimeter. Completed implementation of the [Rectangle](structs/shapes.go#L9-L16), [Circle](structs/shapes.go#L18-L24), and [Triangle](structs/shapes.go#L26-L33) structs with tests for their respective methods.
+6. **Pointers**: Implemented the [Wallet](pointers/wallet.go) struct with methods for depositing and withdrawing Bitcoin, and tests for basic wallet operations.
 
 ## Links from the book
 
@@ -41,3 +42,5 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
 - [Pointers](https://gobyexample.com/pointers)
 - [Struct pointers](https://go.dev/ref/spec#Method_values)
+- [Springer](https://pkg.go.dev/fmt#Stringer)
+- [Don’t just check errors, handle them gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
