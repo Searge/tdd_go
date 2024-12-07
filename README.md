@@ -39,3 +39,5 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Interface types](https://go.dev/ref/spec#Interface_types)
 - [Table driven tests](https://go.dev/wiki/TableDrivenTests)
 - [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
+- [Pointers](https://gobyexample.com/pointers)
+- [Struct pointers](https://go.dev/ref/spec#Method_values)
