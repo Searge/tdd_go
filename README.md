@@ -18,6 +18,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
    1. **Examples**: Completed implementation of the `ByAge` struct and its methods for sorting a slice of [Person](examples/sort_test.go#L8-L15) structs by age.
 3. **Iteration**: Implemented the [Repeat](iteration/repeat.go#L3-L9) function with tests for repeating a character a specified number of times.
 4. **Arrays**: Implemented the [Sum](arrays/sum.go#L4-L10) function with tests for basic arithmetic operations and logging of results. And [SumAllTrails](arrays/sum.go#L23-L35) function with tests for basic arithmetic operations and logging of results.
+5. **Structs:** Implemented the [Shape interface](structs/shapes.go#L5-L7) and its methods for calculating area and perimeter. Completed implementation of the [Rectangle](structs/shapes.go#L9-L16), [Circle](structs/shapes.go#L18-L24), and [Triangle](structs/shapes.go#L26-L33) structs with tests for their respective methods.
 
 ## Links from the book
 
@@ -37,3 +38,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Method declarations](https://go.dev/ref/spec#Method_declarations)
 - [Interface types](https://go.dev/ref/spec#Interface_types)
 - [Table driven tests](https://go.dev/wiki/TableDrivenTests)
+- [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
