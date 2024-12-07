@@ -44,3 +44,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Struct pointers](https://go.dev/ref/spec#Method_values)
 - [Springer](https://pkg.go.dev/fmt#Stringer)
 - [Don’t just check errors, handle them gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
+- [Comparable types](https://golang.org/ref/spec#Comparison_operators)
