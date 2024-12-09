@@ -45,3 +45,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Springer](https://pkg.go.dev/fmt#Stringer)
 - [Don’t just check errors, handle them gracefully](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
 - [Comparable types](https://golang.org/ref/spec#Comparison_operators)
+- [If a map isn’t a reference variable, what is it?](https://dave.cheney.net/2017/04/30/if-a-map-isnt-a-reference-variable-what-is-it)
