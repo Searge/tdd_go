@@ -2,6 +2,11 @@ package maps
 
 import "testing"
 
+// TestSearch tests the Search method of the Dictionary type.
+//
+// It checks that searching for an existing word in the dictionary
+// succeeds, and that searching for a non-existent word returns
+// an ErrNotFound error.
 func TestSearch(t *testing.T) {
 	dictionary := Dictionary{"test": "this is just a test"}
 
@@ -21,6 +26,10 @@ func TestSearch(t *testing.T) {
 	})
 }
 
+// TestAdd tests the Add method of the Dictionary type.
+//
+// It checks that adding a new word to the dictionary succeeds,
+// and that adding an existing word returns an ErrWordExists error.
 func TestAdd(t *testing.T) {
 	t.Run("new word", func(t *testing.T) {
 		dictionary := Dictionary{}
