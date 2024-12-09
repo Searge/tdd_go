@@ -70,6 +70,22 @@ func (d Dictionary) Update(word, definition string) error {
 	return nil
 }
 
-func (d Dictionary) Delete(word string) {
-	delete(d, word)
+// Delete removes a word and its definition from the dictionary.
+//
+// If the word does not exist in the dictionary, it returns ErrWordDoesNotExist.
+// If the word already exists, it removes the word and its definition.
+// If an error occurs while searching for the word, it is returned.
+func (d Dictionary) Delete(word string) error {
+	_, err := d.Search(word)
+
+	switch err {
+	case ErrNotFound:
+		return ErrWordDoesNotExist
+	case nil:
+		delete(d, word)
+	default:
+		return err
+	}
+
+	return nil
 }
