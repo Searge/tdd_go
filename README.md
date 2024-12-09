@@ -20,6 +20,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 4. **Arrays**: Implemented the [Sum](arrays/sum.go#L4-L10) function with tests for basic arithmetic operations and logging of results. And [SumAllTrails](arrays/sum.go#L23-L35) function with tests for basic arithmetic operations and logging of results.
 5. **Structs:** Implemented the [Shape interface](structs/shapes.go#L5-L7) and its methods for calculating area and perimeter. Completed implementation of the [Rectangle](structs/shapes.go#L9-L16), [Circle](structs/shapes.go#L18-L24), and [Triangle](structs/shapes.go#L26-L33) structs with tests for their respective methods.
 6. **Pointers**: Implemented the [Wallet](pointers/wallet.go) struct with methods for depositing and withdrawing Bitcoin, and tests for basic wallet operations.
+7. **Maps**: Implemented the [Dictionary](maps/dictionary.go) struct with methods for adding, deleting, and searching for words, and tests for basic dictionary operations.
 
 ## Links from the book
 
