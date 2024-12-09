@@ -9,6 +9,9 @@ import (
 	"github.com/Searge/tdd_go/helloworld"
 )
 
+// Repo: https://github.com/Searge/tdd_go
+// License: https://github.com/Searge/tdd_go/blob/main/LICENSE
+
 func run(language string, help bool, out io.Writer) {
 	if help {
 		fmt.Fprintln(out, "Usage: go run main.go [options] [command]")
