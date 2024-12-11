@@ -6,6 +6,7 @@ import (
 	"io"
 	"os"
 
+	"github.com/Searge/tdd_go/di"
 	"github.com/Searge/tdd_go/helloworld"
 )
 
@@ -34,4 +35,5 @@ func main() {
 	flag.Parse()
 
 	run(*language, *help, os.Stdout)
+	di.Greet(os.Stdout, "Elodie")
 }
