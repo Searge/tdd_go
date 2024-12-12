@@ -21,6 +21,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 5. **Structs:** Implemented the [Shape interface](structs/shapes.go#L5-L7) and its methods for calculating area and perimeter. Completed implementation of the [Rectangle](structs/shapes.go#L9-L16), [Circle](structs/shapes.go#L18-L24), and [Triangle](structs/shapes.go#L26-L33) structs with tests for their respective methods.
 6. **Pointers**: Implemented the [Wallet](pointers/wallet.go) struct with methods for depositing and withdrawing Bitcoin, and tests for basic wallet operations.
 7. **Maps**: Implemented the [Dictionary](maps/dictionary.go) struct with methods for adding, deleting, and searching for words, and tests for basic dictionary operations.
+8. **Dependency Injection**: Implemented the [Greet](di/di.go#L8-L10) function with tests for basic greeting operations.
 
 ## Links from the book
 
@@ -48,3 +49,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Comparable types](https://golang.org/ref/spec#Comparison_operators)
 - [If a map isn’t a reference variable, what is it?](https://dave.cheney.net/2017/04/30/if-a-map-isnt-a-reference-variable-what-is-it)
 - [Constant errors](https://dave.cheney.net/2016/04/07/constant-errors)
+- [Go Programming Language](https://www.amazon.co.uk/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440)
