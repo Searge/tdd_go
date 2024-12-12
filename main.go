@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"log"
+	"net/http"
 	"os"
 
 	"github.com/Searge/tdd_go/di"
@@ -28,6 +30,9 @@ func run(language string, help bool, out io.Writer) {
 	fmt.Fprintln(out, helloworld.Hello("World", language))
 }
 
+func MyGreeterHandler(w http.ResponseWriter, r *http.Request) {
+	di.Greet(w, "Searge")
+}
 func main() {
 	language := flag.String("lang", "English", "Language for the greeting")
 	help := flag.Bool("help", false, "Show help")
@@ -35,5 +40,8 @@ func main() {
 	flag.Parse()
 
 	run(*language, *help, os.Stdout)
+
+	// Dependency injection code
 	di.Greet(os.Stdout, "Elodie")
+	log.Fatal(http.ListenAndServe(":5001", http.HandlerFunc(MyGreeterHandler)))
 }
