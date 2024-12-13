@@ -48,5 +48,6 @@ func main() {
 	fmt.Printf("\n")
 
 	// Mocking code
-	mocking.Countdown(os.Stdout)
+	sleeper := &mocking.DefaultSleeper{}
+	mocking.Countdown(os.Stdout, sleeper)
 }
