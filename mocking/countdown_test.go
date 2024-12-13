@@ -12,7 +12,7 @@ func TestCountdown(t *testing.T) {
 	Countdown(buffer, spySleeper)
 
 	got := buffer.String()
-	want := "3"
+	want := "3\n2\n1\nGo!"
 
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
