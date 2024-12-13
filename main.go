@@ -4,12 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 
 	"github.com/Searge/tdd_go/di"
 	"github.com/Searge/tdd_go/helloworld"
+	"github.com/Searge/tdd_go/mocking"
 )
 
 // Repo: https://github.com/Searge/tdd_go
@@ -43,5 +43,10 @@ func main() {
 
 	// Dependency injection code
 	di.Greet(os.Stdout, "Elodie")
-	log.Fatal(http.ListenAndServe(":5001", http.HandlerFunc(MyGreeterHandler)))
+	// log.Fatal(http.ListenAndServe(":5001", http.HandlerFunc(MyGreeterHandler)))
+
+	fmt.Printf("\n")
+
+	// Mocking code
+	mocking.Countdown(os.Stdout)
 }
