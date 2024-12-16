@@ -22,6 +22,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 6. **Pointers**: Implemented the [Wallet](pointers/wallet.go) struct with methods for depositing and withdrawing Bitcoin, and tests for basic wallet operations.
 7. **Maps**: Implemented the [Dictionary](maps/dictionary.go) struct with methods for adding, deleting, and searching for words, and tests for basic dictionary operations.
 8. **Dependency Injection**: Implemented the [Greet](di/di.go#L8-L10) function with tests for basic greeting operations.
+9. **Mocking:** Implemented the [Countdown](mocking/countdown.go#L49-L59) function with tests for basic countdown operations.
 
 ## Links from the book
 
