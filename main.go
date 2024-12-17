@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/Searge/tdd_go/di"
 	"github.com/Searge/tdd_go/helloworld"
@@ -48,6 +49,6 @@ func main() {
 	fmt.Printf("\n")
 
 	// Mocking code
-	sleeper := &mocking.DefaultSleeper{}
+	sleeper := mocking.NewConfigurableSleeper(1*time.Second, time.Sleep)
 	mocking.Countdown(os.Stdout, sleeper)
 }

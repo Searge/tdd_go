@@ -6,70 +6,42 @@ import (
 	"time"
 )
 
-const (
-	finalWord      = "Go!"
-	countdownStart = 3
-)
-
+// Sleeper allows you to put delays.
 type Sleeper interface {
 	Sleep()
 }
 
-type DefaultSleeper struct{}
-
+// ConfigurableSleeper is an implementation of Sleeper with a defined delay.
 type ConfigurableSleeper struct {
-	duration time.Duration
+	Duration time.Duration
 	sleep    func(time.Duration)
 }
 
-type SpyTime struct {
-	durationSlept time.Duration
-}
-
-func (s *SpyTime) Sleep(duration time.Duration) {
-	s.durationSlept = duration
-}
-
+// Sleep will pause execution for the defined Duration.
 func (c *ConfigurableSleeper) Sleep() {
-	c.sleep(c.duration)
+	c.sleep(c.Duration)
 }
 
-type SpyCountdownOperations struct {
-	Calls []string
-}
+// NewConfigurableSleeper returns a ConfigurableSleeper with a specified duration and sleep function.
+// The duration defines how long the sleeper will pause execution, while the sleep function allows
+// for customizable sleep behavior during the countdown.
 
-// Spies are a kind of mock which can record how a dependency is used.
-type SpySleeper struct {
-	Calls int
-}
-
-func (s *SpySleeper) Sleep() {
-	s.Calls++
-}
-
-func (d *DefaultSleeper) Sleep() {
-	time.Sleep(1 * time.Second)
-}
-
-func (s *SpyCountdownOperations) Sleep() {
-	s.Calls = append(s.Calls, sleep)
-}
-
-func (s *SpyCountdownOperations) Write(p []byte) (n int, err error) {
-	s.Calls = append(s.Calls, write)
-	return
-}
-
-const write = "write"
-const sleep = "sleep"
-
-func Countdown(out io.Writer, sleeper Sleeper) {
-	for i := countdownStart; i > 0; i-- {
-		sleeper.Sleep()
+func NewConfigurableSleeper(duration time.Duration, sleep func(time.Duration)) *ConfigurableSleeper {
+	return &ConfigurableSleeper{
+		Duration: duration,
+		sleep:    sleep,
 	}
+}
+
+const finalWord = "Go!"
+const countdownStart = 3
+
+// Countdown prints a countdown from 3 to out with a delay between count provided by Sleeper.
+func Countdown(out io.Writer, sleeper Sleeper) {
 
 	for i := countdownStart; i > 0; i-- {
 		fmt.Fprintln(out, i)
+		sleeper.Sleep()
 	}
 
 	fmt.Fprint(out, finalWord)
