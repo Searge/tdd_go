@@ -23,7 +23,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 7. **Maps**: Implemented the [Dictionary](maps/dictionary.go) struct with methods for adding, deleting, and searching for words, and tests for basic dictionary operations.
 8. **Dependency Injection**: Implemented the [Greet](di/di.go#L8-L10) function with tests for basic greeting operations.
 9. **Mocking:** Implemented the [Countdown](mocking/countdown.go#L39-L48) function with tests for basic countdown operations.
-10. ***Concurrency**: Implemented the [CheckWebsites](concurrency/concurrency.go#L9-25) function with tests for basic concurrency operations.
+10. **Concurrency**: Implemented the [CheckWebsites](concurrency/concurrency.go#L9-25) function with tests for basic concurrency operations.
 
 ## Links from the book
 
