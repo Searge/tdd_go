@@ -24,6 +24,7 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 8. **Dependency Injection**: Implemented the [Greet](di/di.go#L8-L10) function with tests for basic greeting operations.
 9. **Mocking:** Implemented the [Countdown](mocking/countdown.go#L39-L48) function with tests for basic countdown operations.
 10. **Concurrency**: Implemented the [CheckWebsites](concurrency/concurrency.go#L9-25) function with tests for basic concurrency operations.
+11. **Select**: Implemented the [ConfigurableRacer](select_wait/racer.go#L23-32) function with tests for basic concurrency operations.
 
 ## Links from the book
 
@@ -55,3 +56,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Test Double](https://martinfowler.com/bliki/TestDouble.html)
 - [Make it work, make it right, make it fast](https://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Premature Optimization](https://wiki.c2.com/?PrematureOptimization)
+- [Using `var` instead of `make` in channels](https://go.dev/play/p/IIbeAox5jKA)
