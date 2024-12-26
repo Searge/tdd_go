@@ -57,3 +57,4 @@ This is a collection of [Go](https://golang.org) code examples that show how to 
 - [Make it work, make it right, make it fast](https://wiki.c2.com/?MakeItWorkMakeItRightMakeItFast)
 - [Premature Optimization](https://wiki.c2.com/?PrematureOptimization)
 - [Using `var` instead of `make` in channels](https://go.dev/play/p/IIbeAox5jKA)
+- [The Laws of Reflection](https://go.dev/blog/laws-of-reflection)
