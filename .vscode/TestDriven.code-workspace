@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "TestDriven",
+      "path": ".."
+    },
+    {
+      "name": "notebooks",
+      "path": "../notebooks"
+    }
+  ],
+  "settings": {
+    "gopls": {
+      "ui.semanticTokens": true,
+      "formatting.gofumpt": true
+    },
+    "[python][jupyter]": {
+      "editor.tabSize": 4,
+    },
+    "python.defaultInterpreterPath": "notebooks/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "jupyter.interactiveWindow.textEditor.autoAddNewCell": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "golang.go",
+      "esbenp.prettier-vscode"
+    ]
+  }
+}
