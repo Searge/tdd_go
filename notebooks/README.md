@@ -8,7 +8,8 @@ The project in the project to test golang notebooks.
 ## Documentation
 
 - [Lexical Elements](Lexical_elements.ipynb)
-- [Types](Types.ipynb)
+- [Types | Basic](Types_basic.ipynb)
+- [Types | Struct, Pointer & Function types](Types_struct,pointer,func.ipynb)
 
 ## References
 
