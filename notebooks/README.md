@@ -10,6 +10,8 @@ The project in the project to test golang notebooks.
 - [Lexical Elements](Lexical_elements.ipynb)
 - [Types | Basic](Types_basic.ipynb)
 - [Types | Struct, Pointer & Function types](Types_struct,pointer,func.ipynb)
+- [Types | Interfaces](Types_interfaces.ipynb)
+- [Types | Maps and Channel types](Types_maps,channels.ipynb)
 
 ## References
 
