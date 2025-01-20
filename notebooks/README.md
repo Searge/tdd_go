@@ -12,6 +12,8 @@ The project in the project to test golang notebooks.
 - [Types | Struct, Pointer & Function types](Types_struct,pointer,func.ipynb)
 - [Types | Interfaces](Types_interfaces.ipynb)
 - [Types | Maps and Channel types](Types_maps,channels.ipynb)
+- [Interfaces & Sugar](Interfaces_n_Sugar.ipynb)
+- [Pointers](Pointers.ipynb)
 
 ## References
 
